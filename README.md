@@ -1,4 +1,5 @@
 # p-07
 
-Práctica 7 de Servicios Web: Crear un API REST con el framework de Slim v4.* con ayuda de tutoriales.
-Esta es una introducción para el proyecto final.
+## 7th Practice | Web Services
+Create a REST API web service by using Slim Framework v4.0.
+This is an introduction for the final project.
