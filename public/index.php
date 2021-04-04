@@ -8,21 +8,21 @@ require __DIR__.'/../vendor/autoload.php';
 
 $app = AppFactory::create();
 
-//First function: /
+//1st function: '/'
 $app->get('/', function(Request $request, Response $response, $args)
 {
     $response->getBody()->write('Hello world!!');
     return $response;
 });
 
-//Second function: /hello/{name}
+//2nd function: '/hello/{name}'
 $app->get('/hello[/{name}]', function(Request $request, Response $response, $args)
 {
     $response->getBody()->write('Hello, '.$args['name'].'!!');
     return $response;
 });
 
-//Third function: /posttest
+//3rd function: '/posttest'
 $app->post('/posttest', function(Request $request, Response $response, $args)
 {
     $reqPost = $request->getParsedBody();
@@ -33,7 +33,7 @@ $app->post('/posttest', function(Request $request, Response $response, $args)
     return $response;
 });
 
-//Fourth method: /testjson
+//4th method: '/testjson'
 $app->get('/testjson', function(Request $request, Response $response, $args)
 {
     $data[0]['Name'] = 'Jonathan';
