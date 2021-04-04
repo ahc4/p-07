@@ -33,6 +33,20 @@ $app->post('/posttest', function(Request $request, Response $response, $args)
     return $response;
 });
 
+//Fourth method: /testjson
+$app->get('/testjson', function(Request $request, Response $response, $args)
+{
+    $data[0]['Name'] = 'Jonathan';
+    $data[0]['LastName'] = 'Guijarro';
+    $data[1]['Name'] = 'Joan';
+    $data[1]['LastName'] = 'Crisol';
+    $data[2]['Name'] = 'Carlos';
+    $data[2]['LastName'] = 'Campos';
+
+    $response->getBody()->write(json_encode($data, JSON_PRETTY_PRINT));
+    return $response;
+});
+
 $app->run();
 
 ?>
