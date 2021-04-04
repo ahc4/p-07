@@ -22,6 +22,17 @@ $app->get('/hello[/{name}]', function(Request $request, Response $response, $arg
     return $response;
 });
 
+//Third function: /posttest
+$app->post('/posttest', function(Request $request, Response $response, $args)
+{
+    $reqPost = $request->getParsedBody();
+    $val1 = $reqPost['val1'];
+    $val2 = $reqPost['val2'];
+
+    $response->getBody()->write('Values: '.$val1.' & '.$val2);
+    return $response;
+});
+
 $app->run();
 
 ?>
