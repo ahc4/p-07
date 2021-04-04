@@ -15,9 +15,10 @@ $app->get('/', function(Request $request, Response $response, $args)
     return $response;
 });
 
-$app->get('/hola[/{nombre}]', function(Request $request, Response $response, $args)
+//Second function: /hello/{name}
+$app->get('/hello[/{name}]', function(Request $request, Response $response, $args)
 {
-    $response->getBody()->write('Hello, '.$args['nombre'].'!!');
+    $response->getBody()->write('Hello, '.$args['name'].'!!');
     return $response;
 });
 
