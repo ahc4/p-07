@@ -3,3 +3,6 @@
 ## 7th Practice | Web Services
 Create a REST API web service by using Slim Framework v4.0.
 This is an introduction for the final project.
+
+Use the command on public/:
+```>> php -S localhost:8000 ```
